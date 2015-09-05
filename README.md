@@ -44,9 +44,25 @@ Run `composer update` afterwards.
 Usage <a name="usage"></a>
 -----
 
-### In your PHP project
+### In your basic Yii2 project
 
+Add the following to the configuration file `web.php`:
 
+```php
+    'components' => [
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                ['class' => 'iriscrm\Yii2PODataAdapter\ODataUrlRule'],
+            ],
+        ],
+    ],
+    'controllerMap' => [
+        'o-data' => 'iriscrm\Yii2PODataAdapter\implementation\ODataController',
+    ],
+
+```
 
 
 
