@@ -22,21 +22,21 @@ Installation is recommended to be done via [composer][]. Add the following to th
 ```json
     "require": {
        "POData/POData": "dev-master",
-       "iriscrm/SimplePOData": "dev-master",
-       "iriscrm/Yii2PODataAdapter": "dev-master"
+       "qeti/SimplePOData": "dev-master",
+       "qeti/Yii2PODataAdapter": "dev-master"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/POData/POData"
+            "url": "https://github.com/qeti/POData"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/iriscrm/SimplePOData"
+            "url": "https://github.com/qeti/SimplePOData"
         },
         {
             "type": "vcs",
-            "url": "https://github.com/iriscrm/Yii2PODataAdapter"
+            "url": "https://github.com/qeti/Yii2PODataAdapter"
         }
     ]
 ```

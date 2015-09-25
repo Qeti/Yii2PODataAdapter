@@ -1,8 +1,8 @@
 {
-    "name": "iriscrm/Yii2PODataAdapter",
+    "name": "qeti/Yii2PODataAdapter",
     "description": "Adapter for using POData with Yii2",
     "keywords": ["odata", "podata", "yii2", "rest"],
-    "homepage": "https://github.com/iriscrm/Yii2PODataAdapter#readme",
+    "homepage": "https://github.com/qeti/Yii2PODataAdapter#readme",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -13,20 +13,15 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/iriscrm/Yii2PODataAdapter/issues",
-        "source": "https://github.com/iriscrm/Yii2PODataAdapter"
+        "issues": "https://github.com/qeti/Yii2PODataAdapter/issues",
+        "source": "https://github.com/qeti/Yii2PODataAdapter"
     },
     "require": {
         "php": ">=5.4.0"
     },
     "autoload": {
         "psr-4": {
-            "iriscrm\\Yii2PODataAdapter\\": ""
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "0.9.x-dev"
+            "qeti\\Yii2PODataAdapter\\": ""
         }
     }
 }
