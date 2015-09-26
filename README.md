@@ -21,24 +21,8 @@ Installation is recommended to be done via [composer][]. Add the following to th
 
 ```json
     "require": {
-       "POData/POData": "dev-master",
-       "qeti/SimplePOData": "dev-master",
-       "qeti/Yii2PODataAdapter": "dev-master"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/qeti/POData"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/qeti/SimplePOData"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/qeti/Yii2PODataAdapter"
-        }
-    ]
+       "qeti/simple-podata": ">=0.9.1"
+    }
 ```
 
 Run `composer update` afterwards.
@@ -59,12 +43,12 @@ Add the following to the configuration file `web.php`:
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'iriscrm\Yii2PODataAdapter\ODataUrlRule'],
+                ['class' => 'qeti\Yii2PODataAdapter\ODataUrlRule'],
             ],
         ],
     ],
     'controllerMap' => [
-        'o-data' => 'iriscrm\Yii2PODataAdapter\implementation\ODataController',
+        'o-data' => 'qeti\Yii2PODataAdapter\implementation\ODataController',
     ],
 
 ```
@@ -72,7 +56,7 @@ Add the following to the configuration file `web.php`:
 Set up class map for MetaProvider:
 
 ```php
-yii::$classMap['iriscrm\Yii2PODataAdapter\implementation\MetadataProvider'] = '@app/models/OData/MetadataProvider.php';
+yii::$classMap['qeti\Yii2PODataAdapter\implementation\MetadataProvider'] = '@app/models/OData/MetadataProvider.php';
 ```
 
 Create classes, what describe entities, for example:
@@ -81,7 +65,7 @@ Create classes, what describe entities, for example:
 namespace app\models\OData\Entities;
 
 use yii\db\ActiveRecord;
-use iriscrm\SimplePOData\EntityTrait;
+use qeti\SimplePOData\EntityTrait;
 
 class Request extends ActiveRecord {
 
@@ -96,7 +80,7 @@ class Request extends ActiveRecord {
 Create MetaProvider class, what describe all entities for POData, for example:
 
 ```php
-namespace iriscrm\Yii2PODataAdapter\implementation;
+namespace qeti\Yii2PODataAdapter\implementation;
 
 use POData\Providers\Metadata\Type\EdmPrimitiveType;
 use POData\Providers\Metadata\SimpleMetadataProvider;
@@ -149,7 +133,7 @@ with it as long as you mention my name and include the [license file][license]. 
 
 [MIT License]: http://opensource.org/licenses/MIT
 
-[license]: https://github.com/iriscrm/Yii2PODataAdapter/blob/master/LICENSE
+[license]: https://github.com/qeti/Yii2PODataAdapter/blob/master/LICENSE
 
 Contact
 -------

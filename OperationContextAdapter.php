@@ -1,12 +1,12 @@
 <?php
 
-namespace iriscrm\Yii2PODataAdapter;
+namespace qeti\Yii2PODataAdapter;
 
 use yii;
 use POData\OperationContext\IHTTPRequest;
 use POData\OperationContext\IOperationContext;
 use POData\OperationContext\Web\OutgoingResponse;
-use iriscrm\Yii2PODataAdapter\RequestAdapter;
+use qeti\Yii2PODataAdapter\RequestAdapter;
 
 class OperationContextAdapter implements IOperationContext
 {

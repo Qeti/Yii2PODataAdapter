@@ -1,21 +1,21 @@
 <?php
 
-namespace iriscrm\Yii2PODataAdapter\implementation;
+namespace qeti\Yii2PODataAdapter\implementation;
 
 use yii;
 use yii\web\Controller;
 use POData\OperationContext\ServiceHost;
-use iriscrm\SimplePOData\DataService;
-use iriscrm\Yii2PODataAdapter\OperationContextAdapter;
+use qeti\SimplePOData\DataService;
+use qeti\Yii2PODataAdapter\OperationContextAdapter;
 
 class ODataController extends Controller
 {
 
     public function actionIndex(
-        $metaProviderClassName = 'iriscrm\\Yii2PODataAdapter\\implementation\\MetadataProvider', 
-        $queryProviderMap = '@vendor/iriscrm/Yii2PODataAdapter/implementation/QueryProvider.php')
+        $metaProviderClassName = 'qeti\\Yii2PODataAdapter\\implementation\\MetadataProvider', 
+        $queryProviderMap = '@vendor/qeti/Yii2PODataAdapter/implementation/QueryProvider.php')
     {
-        yii::$classMap['iriscrm\SimplePOData\QueryProvider'] = $queryProviderMap;
+        yii::$classMap['qeti\SimplePOData\QueryProvider'] = $queryProviderMap;
 
         $op = new OperationContextAdapter(yii::$app->request);
         $host = new ServiceHost($op);

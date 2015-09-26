@@ -1,6 +1,6 @@
 <?php
 
-namespace iriscrm\Yii2PODataAdapter;
+namespace qeti\Yii2PODataAdapter;
 
 use yii;
 use yii\web\UrlRule;

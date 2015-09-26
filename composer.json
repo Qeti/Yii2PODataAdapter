@@ -1,5 +1,5 @@
 {
-    "name": "qeti/Yii2PODataAdapter",
+    "name": "qeti/yii2-podata-adapter",
     "description": "Adapter for using POData with Yii2",
     "keywords": ["odata", "podata", "yii2", "rest"],
     "homepage": "https://github.com/qeti/Yii2PODataAdapter#readme",
@@ -17,7 +17,8 @@
         "source": "https://github.com/qeti/Yii2PODataAdapter"
     },
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "qeti/simple-podata": ">=0.9.1"
     },
     "autoload": {
         "psr-4": {

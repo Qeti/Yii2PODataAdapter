@@ -1,6 +1,6 @@
 <?php
 
-namespace iriscrm\SimplePOData;
+namespace qeti\SimplePOData;
 
 use yii\db\Connection;
 
